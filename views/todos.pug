@@ -1,0 +1,14 @@
+include partials/head
+
+
+.main-container
+  form(class='pure-form' method='POST' action='/addToDo')
+    input(class='pure-input-2' name='submittedTask' placeholder='Things to do...')
+    input(type='submit' value='Do it!' class='pure-button pure-button-primary')
+  .main-list
+    ul(class='ul-list')
+      each todo in toDos.reverse()
+        form(class='pure-form list-item-form-buttons' method='POST' action='/todos/delete/'+todo.id)
+          li(class='list-item' contenteditable="true")= todo.task
+          button(type='submit' name='complete' class='pure-button button-complete')
+          button(type='submit' name='delete' class='pure-button button-delete')

@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS todos CASCADE;
+
+CREATE TABLE todos (
+  id SERIAL PRIMARY KEY,
+  task VARCHAR(40),
+  complete BOOLEAN
+);
