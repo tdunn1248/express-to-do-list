@@ -13,9 +13,7 @@ function deleteTask(id) {
 }
 
 function updateTask(id, task) {
-  return queries.none('UPDATE todos SET task = $2 WHERE id = $1 RETURNING id,task', [id, task])
+  return queries.any('UPDATE todos SET task = $2 WHERE id = $1 RETURNING id,task', [id, task])
 }
 
-
-
-module.exports = {addTask, getList, deleteTask}
+module.exports = {addTask, getList, updateTask, deleteTask}

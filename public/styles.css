@@ -22,7 +22,6 @@ header {
   justify-content: center;
   flex-direction: column;
   border: .5px solid black;
-  flex: 1;
   min-width: 380px;
   max-width: 25vw;
   min-height: 500px;
@@ -45,21 +44,28 @@ header {
 
 .ul-list {
   display: flex;
+  list-style-type: none;
   flex-direction: column;
   flex: 1;
-  list-style-type: none;
-  justify-content: space-around;
+  justify-content: flex-start;
+}
+
+.list-items {
+  flex: 1;
 }
 
 .list-item {
-  flex: 1;
+  flex: 3;
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  margin-top: 1em;
 }
 
 .list-item-form-buttons {
   display: flex;
+  margin-bottom: 1em;
 }
 
 .button-complete {
