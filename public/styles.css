@@ -21,28 +21,31 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: .5px solid black;
   min-width: 380px;
-  max-width: 25vw;
+  max-width: 35vw;
   min-height: 500px;
-  max-height: 80vh;
+  max-height: 90vh;
   background-color: cadetblue;
   border-radius: 1em;
-  border: 0;
+}
+
+.pure-form {
+  margin-top: 1em;
 }
 
 .pure-input-2 {
   margin-bottom: 1em;
   margin-right: 1em;
 }
+
 .main-list {
   display: flex;
-  flex: .75;
+  /*flex: .75;*/
   min-height: 60vh;
   min-width: 30vw;
 }
 
-.ul-list {
+.list-items {
   display: flex;
   list-style-type: none;
   flex-direction: column;
@@ -50,29 +53,43 @@ header {
   justify-content: flex-start;
 }
 
-.list-items {
-  flex: 1;
-}
-
 .list-item {
-  flex: 3;
   display: flex;
   justify-content: space-around;
   align-items: center;
-
-  margin-top: 1em;
+  padding: 0 20px 0 10px;
 }
+
+.list-item p {
+  min-width: 200px;
+  max-width: 200px;
+  padding: 10px;
+}
+
 
 .list-item-form-buttons {
   display: flex;
   margin-bottom: 1em;
 }
 
-.button-complete {
+.button-update {
   background: rgb(28, 184, 65);
   margin-right: .5em;
+  transition: all .3s;
+
 }
 
 .button-delete {
   background: rgb(202, 60, 60);
+  transition: all .3s;
+}
+
+.button-update:hover {
+  background-color: yellow;
+  border-radius: 1em;
+}
+
+.button-delete:hover {
+  background: rgb(400,0,0);
+  border-radius: 1em;
 }
