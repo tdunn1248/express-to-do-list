@@ -18,7 +18,7 @@ app.get('/', (request, response) => {
 
 app.get('/todos', (request, response) => {
   getList()
-    .then(toDos => { response.render('todos', {toDos: toDos})})
+    .then(toDos => {response.render('todos', {toDos: toDos})})
     .catch(error => console.log(error))
 })
 
