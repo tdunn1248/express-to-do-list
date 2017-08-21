@@ -17,9 +17,9 @@ app.get('/', (request, response) => {
 })
 
 app.get('/todos', (request, response) => {
-  getList().then(toDos => {
-    response.render('todos', {toDos: toDos})
-  })
+  getList()
+    .then(toDos => { response.render('todos', {toDos: toDos})})
+    .catch(error => console.log(error))
 })
 
 app.post('/addToDo', (request, response) => {
@@ -35,9 +35,9 @@ app.post('/todos/delete/:id', (request, response) => {
 })
 
 app.get('/todos/update/:id', (request, response) => {
-  getList().then(toDos => {
-    response.render('update', {toDos: toDos, id: request.params.id})
-  })
+  getList()
+    .then(toDos => {response.render('todos', {toDos: toDos, id: request.params.id})})
+    .catch(error => console.log(error))
 })
 
 app.post('/todos/update/:id', (request, response) => {
