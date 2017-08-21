@@ -40,7 +40,6 @@ header {
 
 .main-list {
   display: flex;
-  /*flex: .75;*/
   min-height: 60vh;
   min-width: 30vw;
 }
@@ -66,7 +65,6 @@ header {
   padding: 10px;
 }
 
-
 .list-item-form-buttons {
   display: flex;
   margin-bottom: 1em;
@@ -76,7 +74,6 @@ header {
   background: rgb(28, 184, 65);
   margin-right: .5em;
   transition: all .3s;
-
 }
 
 .button-delete {
